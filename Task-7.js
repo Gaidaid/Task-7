@@ -9,10 +9,10 @@ function mergeSort(arr) {
         return arr;
     }
     const middle = Math.floor(arr.length / 2);
-    const first_half = arr.slice(0, middle);
-    const second_half = arr.slice(middle);
-    const leftSort = mergeSort(first_half);
-    const rightSort = mergeSort(second_half);
+    const first_part = arr.slice(0, middle);
+    const second_part = arr.slice(middle);
+    const leftSort = mergeSort(first_part);
+    const rightSort = mergeSort(second_part);
 
     return merge(leftSort, rightSort);
 }
